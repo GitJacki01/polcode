@@ -11,6 +11,10 @@
       <%= f.number_field :age, class: 'form-control' %>
     </div>
     <div class="form-group">
+      <%= f.label :city_id, 'City' %>
+      <%= collection_select(:user, :city_id, City.all.order(name: :asc), :id, :name, {}, class: 'form-control') %>
+    </div>
+    <div class="form-group">
       <%= f.label :email %>
       <%= f.email_field :email, class: 'form-control' %>
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>

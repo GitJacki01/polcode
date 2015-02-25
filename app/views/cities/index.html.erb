@@ -21,6 +21,7 @@
         <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    <tr><td colspan="5"><%= will_paginate @cities %></td></tr>
   </tbody>
 </table>
 
